@@ -1,0 +1,267 @@
+@media (min-width: 800px) {
+  .collapse {
+    padding-left: 350px;
+  }
+}
+
+.profile, .rev {
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+  margin-top:0;
+}
+
+footer {
+  margin-top: 60px;
+  padding: 3px;
+}
+
+img {
+  max-width: 100px;
+  width: 50%;
+  margin-right: 20px;
+  border-radius: 5%;
+}
+
+.tab {
+  background-color:#36485b;
+  color:#fff;
+}
+
+.item {
+  margin-top: 60px;
+}
+.col-md-4 {
+
+}
+/* Profile Section */
+
+.profile {
+  border: 1px solid #F1F1F1;
+  padding-bottom: 190px;
+}
+
+.business-logo {
+  padding-top: 5px;
+}
+
+.business-logo img {}
+
+.business-name {
+  font-size: 24px;
+}
+
+.business-name {
+  font-size: 24px;
+}
+
+.basic-info {
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cat {
+  grid-template-columns: auto auto;
+}
+
+.cat-item {
+  background-color: #B5B1BC;
+  border: 1pX solid #FFFFFF;
+  color: white;
+}
+
+.checked {
+  color: orange;
+}
+
+.user-rating {
+  margin: 5px 0;
+  padding: 0 8px;
+}
+
+.user-rating .heading {
+  margin-right: 16px;
+  font-size: 18px;
+}
+
+/* Three column layout */
+
+.side {
+  float: left;
+  width: 15%;
+  margin-top: 10px;
+}
+
+.middle {
+  margin-top: 10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+
+.right {
+  text-align: right;
+}
+
+/* The bar container */
+
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+
+.bar-5 {
+  width: 60%;
+  height: 18px;
+  background-color: #4CAF50;
+}
+
+.bar-4 {
+  width: 30%;
+  height: 18px;
+  background-color: #2196F3;
+}
+
+.bar-3 {
+  width: 10%;
+  height: 18px;
+  background-color: #00bcd4;
+}
+
+.bar-2 {
+  width: 4%;
+  height: 18px;
+  background-color: #ff9800;
+}
+
+.bar-1 {
+  width: 15%;
+  height: 18px;
+  background-color: #f44336;
+}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+  .basic-info {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+  }
+}
+
+/* End of Profile */
+
+/*Add a review*/
+
+.rev {
+  border: 1px solid #F1F1F1;
+}
+
+.comment-box {
+  width: 100%;
+}
+
+/*add review*/
+
+.add-review {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 100px auto;
+  margin-bottom: 10px;
+}
+
+/* Review section*/
+
+.review {
+  margin-top: 20px;
+  border: 1px solid #b5b5b5;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.user-img {
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.review-body {}
+
+.time {
+  color: #999;
+}
+
+.checked {
+  color: orange;
+}
+
+.review-rating {
+  float: right;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+/*End of Add review*/
+
+/*Similar Businesses*/
+
+.business-card {
+  display: block;
+  border-top: 1px solid #F1F1F1;
+  border-bottom: 1px solid #F1F1F1;
+  border: 1px solid #b5b5b5;
+  border-radius: 5px;
+  padding: 3px;
+  margin-top: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.business-logo {
+  padding-top: 5px;
+}
+
+.business-name {
+  font-size: 24px;
+}
+
+.checked {
+  color: orange;
+}
+
+.user-rating {
+  margin: 5px 0;
+}
+
+@media (max-width: 400px) {
+  .business-card {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+  }
+  .profile {
+    padding-bottom: 350px;
+  }
+}
+
+/* End of Similar Business*/
