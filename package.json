@@ -6,7 +6,6 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "test": "mocha"
   },
   "repository": {
     "type": "git",
