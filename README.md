@@ -2,11 +2,10 @@
 WeConnect provides a platform that brings businesses and individuals together. This platform creates awareness for businesses and gives the users the ability to write reviews about the businesses they have interacted with.
 <div align="center">
 <br><br>
-    <img width=70% src="https://github.com/ah-med/WEconnect/blob/refactor-code/template/images/hompage.jpg">
+    <img width=70% src="https://raw.githubusercontent.com/ah-med/WEconnect/ch-Update-readme-%23156187908/template/images/homepage.jpg">
 <br><br>
 </div>
 <p align="center">
-  <a href="#webpage">Link to hosted webpage</a> •
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-contribute">How To Contribute</a> •
   <a href="#Dependencies">Dependencies</a> •
@@ -35,9 +34,26 @@ Prerequisite - A practical experience with front-end design using HTML/CSS and B
 Follow the steps below to contribute to this project
 
 - Fork the project
+```bash
+  In the top-right corner of this page, click Fork.
+```
+- Clone to your computer
+```bash
+   $ git clone https://github.com/yourusername/WeConnect.git
+```
 - Create a Branch
+```bash
+   $ git branch <yourbranchname>
+   $ git checkout <yourbranchname>
+```
 - Make Changes
+```bash
+   Feel free to make the project better
+```
 - Create a Pull Request
+```bash
+   Push your changes and create a pull request.
+```
 
 ## Dependencies
 - [Bootstrap 4](https://getbootstrap.com) -  A framework for building responsive and mobile-first websites
