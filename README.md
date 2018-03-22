@@ -2,7 +2,7 @@
 WeConnect provides a platform that brings businesses and individuals together. This platform creates awareness for businesses and gives the users the ability to write reviews about the businesses they have interacted with.
 <div align="center">
 <br><br>
-    <img width=70% src="./template/images/hompage.jpg">
+    <img width=70% src="https://raw.githubusercontent.com/ah-med/WEconnect/ch-Update-readme-%23156187908/template/images/homepage.jpg">
 <br><br>
 </div>
 <p align="center">
