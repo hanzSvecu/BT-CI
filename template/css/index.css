@@ -4,7 +4,11 @@
 }
 .make-sticky {
 	position: sticky;
-	top:60px;
+	top:56px;
+}
+
+#business-search{
+ border-bottom: 1px solid #CCCCCC;
 }
 
 #catch-intro {
