@@ -1,0 +1,54 @@
+body {
+	background-image: url("../images/bg1.png");
+	background-color: #DEDEBD;
+}
+.remove-link-style,
+.remove-link-style:hover{
+	text-decoration-line:none;
+	color:black;
+}
+.red {
+  color: red;
+}
+/* Fa fonts*/
+.fa{
+	color:orange;
+}
+.far {
+	color:orange;
+}
+
+.small {
+  font-size: 12px;
+}
+.btn {
+	background-color:orange;
+	color:#fff;
+	border:none;
+}
+.btn:hover {
+	color: #fff;
+	border-radius: 0;
+	background-color:#36485b;
+}
+a:hover {
+  text-decoration-line: none;
+  color: inherit;
+}
+
+@media (min-width: 800px) {
+  .collapse {
+    padding-left: 250px;
+  }
+  .navbar-nav {
+    margin-right: 25px;
+  }
+}
+footer {
+  margin-top: 60px;
+  color: #FFFFFF;
+  padding: 10px;
+}
+.box-effect:hover {
+	box-shadow: 0 2px 2px 0 #f7a20e, 0 2px 2px 0 #f7a20e;
+}
