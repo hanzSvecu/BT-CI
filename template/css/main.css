@@ -38,11 +38,14 @@ a:hover {
 
 @media (min-width: 800px) {
   .collapse {
-    padding-left: 250px;
+		padding:0 10px;
   }
-  .navbar-nav {
-    margin-right: 25px;
-  }
+	.navbar-left {
+		margin-right: 50%;
+	}
+	.navbar-right {
+		margin-left:auto;
+	}
 }
 footer {
   margin-top: 60px;
