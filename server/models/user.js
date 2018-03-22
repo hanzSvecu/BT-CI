@@ -1,1 +1,1 @@
-//contains userModel class for manipulating dummy data
+// contains userModel class for manipulating dummy data

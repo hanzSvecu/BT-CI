@@ -1,1 +1,1 @@
-//helper functions for searching dummy database
+// helper functions for searching dummy database

@@ -1,1 +1,1 @@
-//middleware for validating users
+// middleware for validating users
