@@ -3,7 +3,12 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
   margin-top:0;
 }
-
+.basic-info,.categories {
+  padding:0 5px;
+}
+.about{
+  padding:0 10px;
+}
 footer {
   margin-top: 60px;
   padding: 3px;
