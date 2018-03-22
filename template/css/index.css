@@ -1,0 +1,120 @@
+@media (min-width: 800px) {
+	.collapse{
+		 padding-left:350px;
+	}
+}
+
+.grid {
+	display:grid;
+	grid-template-columns:auto auto;
+}
+
+
+#catch-intro {
+	padding-top:120px;
+	height: 450px;
+	background-image: url("../images/header1.jpg");
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+	margin-bottom:20px;
+	color:#F3F2F7;
+	border-bottom: 1px solid #858589;
+}
+.intro-heading {
+	margin-top:60px;
+	margin-bottom: 20px;
+}
+
+.intro-btn {
+	padding:10px;
+	font-size: 20px;
+	width:300px;
+}
+
+.form-control {
+	margin:10px;
+	background-color:#FFFFFF;
+}
+
+.business-list {
+	margin-top:0px;
+}
+
+.search-bus {
+	padding-left:30px;
+	background-color:#FFFFFF;
+}
+
+.search-input {
+	min-width:500px;
+}
+
+.disp-business {
+	padding:20px;
+	grid-template-columns:33.33% 33.33% 33.33%;
+}
+
+.business-card {
+	display: grid;
+	grid-template-columns:30% 70%;
+	border:1px solid #d6d6d6;
+	border-radius:5px;
+	background-color:#FFFFFF;
+	max-width:400px;
+	padding:10px;
+	margin:5px;
+}
+
+.business-logo {
+	padding-top: 5px;
+}
+
+.business-logo img {
+	border-radius:;
+	width: 80px;
+	height: 80px;
+}
+
+.business-name {
+	font-size:24px;
+}
+
+.user-rating {
+	margin:5px 0;
+}
+
+.user-rating .heading {
+	margin-right:16px;
+	font-size:18px;
+}
+
+@media (max-width: 900px) {
+	  .business-card {
+	  	  text-align:center;
+				display:block;
+				margin-top:20px;
+		}
+		.grid {
+				grid-template-columns:auto auto;
+		}
+	  .search-input {
+				min-width:auto;
+		}
+}
+
+@media (max-width: 600px) {
+	.grid {
+		display:block;
+		grid-template-columns:auto;
+	}
+	.search-bus {
+		padding:5px;
+	}
+	.btn-submit {
+		width:100%;
+	}
+	#catch-intro {
+		height: 350px;
+	}
+
+}
