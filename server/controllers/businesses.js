@@ -87,6 +87,17 @@ class BusinessController {
 			details: review
 		});
 	}
+	/**
+	*  Get all reviews for a business
+	*@param {*} req The request *.
+	*@param {*} res The request *.
+	*@returns {undefined} The return *
+	*/
+	static getReviewsById(req, res) {
+		const { id } = req.params;
+		const review = BusinessModel.getReviews(id);
+		sendData(res, 'Not a registered Business', review);
+	}
 }
 
 export default BusinessController;
