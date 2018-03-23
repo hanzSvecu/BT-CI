@@ -9,6 +9,8 @@ router.post('/', ValidateBusiness.register, BusinessController.register);
 router.put('/:id', ValidateBusiness.register, BusinessController.update);
 // Delete a business
 router.delete('/:id', BusinessController.remove);
+// Get a business
+router.get('/:id', BusinessController.retrieveId);
 
 
 export default router;

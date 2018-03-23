@@ -7,6 +7,9 @@ const sendDetails = (message, details, res) => res.status(200).json({
 	message,
 	details
 });
+const sendData = (res, err, data) => (
+	(data === -1) ? errorMessage(res, err) : res.status(200).json({ data }));
+
 
 /**
  * @class BusinessController
@@ -45,6 +48,16 @@ class BusinessController {
 		const { id } = req.params;
 		const removeStatus = BusinessModel.removeBusiness(id);
 		return (removeStatus === -1) ? errorMessage(res, 'Invalid id') : sendDetails('Business successfully removed', removeStatus, res);
+	}
+	/**
+	* Get a business by id
+	*@param {*} req The request *.
+	*@param {*} res The request *.
+	*@returns {undefined} The return *
+	*/
+	static retrieveId(req, res) {
+		const getIndex = BusinessModel.getBusiness(req.params.id);
+		sendData(res, 'Business not found', getIndex);
 	}
 }
 
