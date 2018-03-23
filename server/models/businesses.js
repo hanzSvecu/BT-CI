@@ -59,6 +59,18 @@ class BusinessModel {
 		businesses.splice(busIndex, 1);
 		return businesses;
 	}
+	/**
+	* get a business
+	*@param {*} id The request object.
+	*@returns {*} return
+	*/
+	static getBusiness(id) {
+		const valid = checkDb(id, businesses);
+		if (valid === -1) {
+			return valid;
+		}
+		return businesses[valid];
+	}
 }
 
 export default BusinessModel;
