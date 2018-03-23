@@ -6,6 +6,10 @@ form {
   padding: 30px;
 }
 
+form p {
+  margin-top:12px;
+}
+
 footer {
   margin-top: 60px;
   color: #FFFFFF;
