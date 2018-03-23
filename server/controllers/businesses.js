@@ -35,6 +35,17 @@ class BusinessController {
 		const updated = BusinessModel.updateBusiness(id, name, categories, location);
 		return (updated === -1) ? errorMessage(res, 'Invalid id') : sendDetails('Your information has been updated', updated, res);
 	}
+	/**
+	* Remove a business
+	*@param {*} req The request *.
+	*@param {*} res The request *.
+	*@returns {undefined} The return *
+	*/
+	static remove(req, res) {
+		const { id } = req.params;
+		const removeStatus = BusinessModel.removeBusiness(id);
+		return (removeStatus === -1) ? errorMessage(res, 'Invalid id') : sendDetails('Business successfully removed', removeStatus, res);
+	}
 }
 
 export default BusinessController;

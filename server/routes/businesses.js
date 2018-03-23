@@ -7,5 +7,8 @@ const router = express.Router();
 router.post('/', ValidateBusiness.register, BusinessController.register);
 // Update a business
 router.put('/:id', ValidateBusiness.register, BusinessController.update);
+// Delete a business
+router.delete('/:id', BusinessController.remove);
+
 
 export default router;
