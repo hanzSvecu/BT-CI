@@ -4,6 +4,7 @@
   "description": "WeConnect provides a platform that brings businesses and individuals together. This platform creates awareness for businesses and gives the users the ability to write reviews about the businesses they have interacted with. <div align=\"center\"> <br><br>     <img width=70% src=\"https://raw.githubusercontent.com/ah-med/WEconnect/ch-Update-readme-%23156187908/template/images/homepage.jpg\"> <br><br> </div> <p align=\"center\">   <a href=\"#key-features\">Key Features</a> •   <a href=\"#how-to-contribute\">How To Contribute</a> •   <a href=\"#Dependencies\">Dependencies</a> •   <a href=\"#license\">License</a> </p>",
   "main": "app.js",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
