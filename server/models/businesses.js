@@ -44,6 +44,21 @@ class BusinessModel {
 		};
 		return businesses[busIndex];
 	}
+	/**
+	* remove business
+	*@param {*} id The request object.
+	*@returns {*} return
+	*/
+	static removeBusiness(id) {
+		// search database for index
+		const busIndex = checkDb(id, businesses);
+		if (busIndex === -1) {
+			return busIndex;
+		}
+		// delete business
+		businesses.splice(busIndex, 1);
+		return businesses;
+	}
 }
 
 export default BusinessModel;
