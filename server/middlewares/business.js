@@ -17,7 +17,7 @@ class ValidateBusiness {
 		return (!name || !categories || !location) ? errorMessage(res) : next();
 	}
 	/**
-	* Add review for a business
+	* searh for query
 	*@param {*} req The request *.
 	*@param {*} res The request *.
 	*@param {*} next next.
@@ -27,6 +27,20 @@ class ValidateBusiness {
 		const { location, category } = req.query;
 		req.query.location = (!location) ? ' ' : location;
 		req.query.category = (!category) ? ' ' : category;
+		next();
+	}
+	/**
+  * Post review for a business
+  *@param {*} req The request *.
+  *@param {*} res The request *.
+  *@param {*} next next.
+  *@returns {*} The return *
+  */
+	static postReview(req, res, next) {
+		const { name, rating, comment } = req.body;
+		if (!name || !rating || !comment) {
+			return errorMessage(res);
+		}
 		next();
 	}
 }

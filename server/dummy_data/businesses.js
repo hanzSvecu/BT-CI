@@ -8,4 +8,23 @@ const businesses = [
 	}
 ];
 
-module.exports = { businesses };
+const reviews = [
+	{
+		id: 101,
+		average_rating: 4,
+		review: [
+			{
+				name: 'adura oyewole',
+				rating: 4,
+				comment: 'It is a good business'
+			},
+			{
+				name: 'modupe Ayoola',
+				rating: 3,
+				comment: 'Good business. They need to focus on customer satisfaction'
+			}
+		]
+	}
+];
+
+module.exports = { businesses, reviews };

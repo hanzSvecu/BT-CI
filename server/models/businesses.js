@@ -1,6 +1,7 @@
-import { businesses } from '../dummy_data/businesses';
+import { businesses, reviews } from '../dummy_data/businesses';
 import checkDb from '../helpers/checkdb';
 import searchDb from '../helpers/searchdb';
+import averageRating from '../helpers/averagerating';
 
 
 /**
@@ -88,6 +89,31 @@ class BusinessModel {
 		const matchIndex = searchDb(location, category, businesses);
 		const getBusinesses = matchIndex.map(index => businesses[index]);
 		return getBusinesses;
+	}
+	/**
+	* add review for a business
+	*@param {*} id The request object.
+	*@param {*} name The request object.
+	*@param {*} rating The request object.
+	*@param {*} comment The request object.
+	*@returns {*} return
+	*/
+	static addReview(id, name, rating, comment) {
+		const reviewIndex = checkDb(id, businesses);
+		if (reviewIndex === -1) {
+			return -1;
+		}
+		// post the review
+		reviews[reviewIndex].review.push({
+			name,
+			rating,
+			comment
+		});
+		// calculate average average_rating
+		const average = averageRating();
+		// set average_rating
+		reviews[reviewIndex].average_rating = average;
+		return reviews[reviewIndex];
 	}
 }
 
