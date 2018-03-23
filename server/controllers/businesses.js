@@ -59,6 +59,18 @@ class BusinessController {
 		const getIndex = BusinessModel.getBusiness(req.params.id);
 		sendData(res, 'Business not found', getIndex);
 	}
+	/**
+	* Gt all businesses
+	*@param {*} req The request *.
+	*@param {*} res The request *.
+	*@returns {undefined} The return *
+	*/
+	static retrieveAll(req, res) {
+		const { location, category } = req.query;
+		const getBus = BusinessModel.getAllBusiness(location, category);
+		res.status(200);
+		res.json({ Business: getBus });
+	}
 }
 
 export default BusinessController;

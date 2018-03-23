@@ -11,6 +11,8 @@ router.put('/:id', ValidateBusiness.register, BusinessController.update);
 router.delete('/:id', BusinessController.remove);
 // Get a business
 router.get('/:id', BusinessController.retrieveId);
+// Get all businesses
+router.get('/', ValidateBusiness.search, BusinessController.retrieveAll);
 
 
 export default router;
