@@ -1,5 +1,8 @@
 import { businesses } from '../dummy_data/businesses';
 import checkDb from '../helpers/checkdb';
+import searchDb from '../helpers/searchdb';
+
+
 /**
  * @class BusinessController
  */
@@ -70,6 +73,21 @@ class BusinessModel {
 			return valid;
 		}
 		return businesses[valid];
+	}
+	/**
+	* get all business
+	*@param {*} location The request object.
+	*@param {*} category The request object.
+	*@returns {*} return
+	*/
+	static getAllBusiness(location, category) {
+		if (location === ' ' && category === ' ') {
+			return businesses;
+		}
+		// search the database for matching indexes
+		const matchIndex = searchDb(location, category, businesses);
+		const getBusinesses = matchIndex.map(index => businesses[index]);
+		return getBusinesses;
 	}
 }
 

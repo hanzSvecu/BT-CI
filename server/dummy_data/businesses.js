@@ -5,8 +5,7 @@ const businesses = [
 		name: 'Abc company',
 		categories: ['tech', 'agric', 'education'],
 		location: 'Nigeria'
-	},
+	}
 ];
-
 
 module.exports = { businesses };
