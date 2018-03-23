@@ -115,6 +115,18 @@ class BusinessModel {
 		reviews[reviewIndex].average_rating = average;
 		return reviews[reviewIndex];
 	}
+	/**
+	* Get all reviews for a business
+	*@param {*} id The request object.
+	*@returns {*} return
+	*/
+	static getReviews(id) {
+		const reviewIndex = checkDb(id, reviews);
+		if (reviewIndex === -1) {
+			return -1;
+		}
+		return reviews[reviewIndex].review;
+	}
 }
 
 export default BusinessModel;
