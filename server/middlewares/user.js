@@ -17,6 +17,17 @@ class ValidateUser {
 		const { password, email } = req.body;
 		return (!name || !password || !email) ? errorMessage(res) : next();
 	}
+	/**
+  * Add review for a business
+  *@param {*} req The request *.
+  *@param {*} res The request *.
+  *@param {*} next next.
+  *@returns {*} The return *
+  */
+	static login(req, res, next) {
+		const { email, password } = req.body;
+		return (!email || !password) ? errorMessage(res) : next();
+	}
 }
 
 export default ValidateUser;
