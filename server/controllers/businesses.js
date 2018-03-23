@@ -71,6 +71,22 @@ class BusinessController {
 		res.status(200);
 		res.json({ Business: getBus });
 	}
+	/**
+	* Add a review for a business
+	*@param {*} req The request *.
+	*@param {*} res The request *.
+	*@returns {undefined} The return *
+	*/
+	static postReview(req, res) {
+		const { id } = req.params;
+		const { name, rating, comment } = req.body;
+		const review = BusinessModel.addReview(id, name, rating, comment);
+		return (review === -1) ? errorMessage(res, 'Not found') : res.status(200).json({
+			id,
+			message: 'Review sent. Thank you',
+			details: review
+		});
+	}
 }
 
 export default BusinessController;

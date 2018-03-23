@@ -13,6 +13,8 @@ router.delete('/:id', BusinessController.remove);
 router.get('/:id', BusinessController.retrieveId);
 // Get all businesses
 router.get('/', ValidateBusiness.search, BusinessController.retrieveAll);
+//  Add review for a business
+router.post('/:id/reviews', ValidateBusiness.postReview, BusinessController.postReview);
 
 
 export default router;
