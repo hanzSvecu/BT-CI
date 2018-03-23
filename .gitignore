@@ -1,2 +1,4 @@
 *thumbs.db
 *node_modules
+*build
+*.nyc_output
