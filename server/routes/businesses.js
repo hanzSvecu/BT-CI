@@ -3,6 +3,7 @@ import BusinessController from '../controllers/businesses';
 import ValidateBusiness from '../middlewares/business';
 
 const router = express.Router();
+
 // Register a business
 router.post('/', ValidateBusiness.register, BusinessController.register);
 // Update a business
