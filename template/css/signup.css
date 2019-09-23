@@ -1,0 +1,38 @@
+body {
+  background-color: #F5F5F5;
+}
+
+form {
+  padding: 30px;
+}
+
+form p {
+  margin-top:12px;
+}
+
+footer {
+  margin-top: 60px;
+  color: #FFFFFF;
+}
+
+section {
+  margin-top: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#signup-form .container {
+  max-width: 500px;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.form-group,
+.form-check {
+  margin: 25px 0;
+}
+
+.btn,
+.form-control {
+  border-radius: 0;
+}

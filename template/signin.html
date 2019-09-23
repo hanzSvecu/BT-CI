@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"></link>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"></link>
+	<link rel="shortcut icon" href="./images/fav.ico">
+	<link rel="stylesheet" href="./css/main.css"></link>
+	<link rel="stylesheet" href="./css/signin.css"></link>
+</head>
+
+<body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+		<!-- Logo -->
+		<a class="navbar-brand" href="./index.html">WEconnect</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+		<!-- Links -->
+		<div class="collapse navbar-collapse" id="collapsibleNavbar" align="center">
+			<ul class="navbar-nav navbar-left">
+				<li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="./register.html">Register Business</a></li>
+			</ul>
+			<ul class="navbar-nav navbar-right">
+				<!-- Links Use this when user signed in
+		<li class="nav-item"><a class="nav-link" href="./signin.html"><span class="fa fa-user-circle"></span> Sign In</a></li> -->
+				<li class="nav-item"><a class="nav-link active" href="#">Sign In</a></li>
+				<li class="nav-item"><a class="nav-link" href="./signup.html"><span class="fa fa-user-plus"></span> Sign Up</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Sign-In form -->
+	<section id="login-form">
+
+		<div class="container">
+
+			<form action="/action.js">
+				<span class="small red">* required</span>
+				<div class="form-group">
+					<label for="email">Email: <span class="red">*</span></label>
+					<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+				</div>
+				<div class="form-group">
+					<label for="pwd">Password: <span class="red">*</span></label>
+					<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+				</div>
+				<div class="form-check">
+					<label class="form-check-label"></label>
+					<input class="form-check-input" type="checkbox" name="remember"> Remember me
+				</div>
+				<div align="center">
+					<button type="submit" class="btn btn-primary">Sign In</button>
+				</div>
+				<p>Don't have an account ? <span><a href="./signup.html"><span class="fa fa-user-plus"></span> Sign Up</a></span></p>
+			</form>
+
+		</div>
+
+	</section>
+
+	<!-- Footer -->
+	<footer class="bg-dark navbar-dark">
+		<div class="container-fluid text-center">
+			WEconnect &copy; 2018.
+		</div>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	</script>
+</body>
+
+</html>

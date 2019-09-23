@@ -1,0 +1,45 @@
+var assert = require('assert');
+var businessController =  require('../../../server/controllers/businesses');
+
+describe('BusinessesController', function () {
+
+    // describe('isValidUserId', function(){
+    //
+    //     it('should return true if valid user id', function(){
+    //         var isValid = loginController.isValidUserId(['abc123','xyz321'], 'abc123')
+    //         assert.equal(isValid, true);
+    //     });
+    //
+    //     it('should return false if invalid user id', function(){
+    //         var isValid = loginController.isValidUserId(['abc123','xyz321'],'abc1234')
+    //         assert.equal(isValid, false);
+    //     });
+    //
+    // });
+
+    // register
+    it("should register business", function() {
+        const newBus1 = {
+            name: 'Isaac Ajala',
+            categories: 'Agric, farming, consumer goods',
+            location: '23 Idiroko lane. Iragberi'
+        };
+        const newBus2 = {
+            name: 'Isaac Ajala',
+            categories: 'Agric, farming, consumer goods',
+            location: '23 Idiroko lane. Iragberi'
+        };
+        var busRegister = businessController.register(newBus1);
+        assert.equal(busRegister, 'Your business is successfully registered with id: 1');
+        busRegister = businessController.register(newBus2);
+        assert.equal(busRegister, 'Your business is successfully registered with id: 2');
+    });
+    it("should NOT register business with incomplete data", function() {
+        const newBus1 = {
+            name: 'Isaac Ajala',
+        };
+        var busRegister = businessController.register(newBus1);
+        busRegister.contains('error');
+    });
+
+});

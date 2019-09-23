@@ -1,0 +1,24 @@
+/* Business registration form */
+section {
+  margin-top: 120px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#reg-form .container {
+  max-width: 700px;
+  background-color: #FFF;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.form-group, .form-check {
+  margin: 25px 0;
+}
+
+.btn, .form-control {
+  border-radius: 0;
+}
+
+form {
+  padding: 30px;
+}
