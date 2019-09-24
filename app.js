@@ -10,6 +10,7 @@ const swaggerDocument = require('./swagger.json');
 
 const upload = multer();
 const app = express();
+app.set('view engine', 'ejs');
 
 // parsing application/json
 app.use(bodyParser.json());
@@ -28,10 +29,14 @@ app.use('/api/doc', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 const port = parseInt(process.env.PORT, 10) || 3000;
 app.set('port', port);
 
-// Setup a default catch-all route
-app.get('*', (req, res) => res.status(200).send({
-	message: 'Welcome to WEconnect',
-}));
+// Added by Jan Svec: static routes
+app.use('/', express.static(__dirname + '/template'));
+
+// Added by Jan Svec: commented default re-route
+// // Setup a default catch-all route
+// app.get('*', (req, res) => res.status(200).send({
+// 	message: 'Welcome to WEconnect',
+// }));
 
 // Start listening when you are not running under test
 export default (!module.parent) ? app.listen(port) : app;

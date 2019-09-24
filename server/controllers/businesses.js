@@ -1,4 +1,6 @@
+// TODO: use original line
 import BusinessModel from '../models/businesses';
+// var businessController =  require('../models/businesses');
 
 const errorMessage = (res, error) => res.status(404).json({
 	error
