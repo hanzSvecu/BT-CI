@@ -1,6 +1,6 @@
 // TODO: use original line
 import BusinessModel from '../models/businesses';
-// var businessController =  require('../models/businesses');
+// var BusinessModel =  require('../models/businesses');
 
 const errorMessage = (res, error) => res.status(404).json({
 	error
@@ -102,4 +102,7 @@ class BusinessController {
 	}
 }
 
+// ES6 syntax
 export default BusinessController;
+// CommonJS syntax
+// module.exports(BusinessController);

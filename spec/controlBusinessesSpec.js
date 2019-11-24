@@ -1,20 +1,22 @@
 // Covers all methods of server/controllers/businesses.js
 // import jasmine from 'jasmine';
-// import businessController from '../server/controllers/businesses.js';
+import businessController from '../server/controllers/businesses.js';
 
-var businesses = require('../server/controllers/businesses.js');
+// var businesses = require('../server/controllers/businesses.js');
 
 describe("businessControlTest", function(){
     // register
     it("should register business", function() {
         const newBus1 = {
+            id: 1,
             name: 'Isaac Ajala',
-            categories: 'Agric, farming, consumer goods',
+            categories: ['Agric, farming, consumer goods'],
             location: '23 Idiroko lane. Iragberi'
         };
         const newBus2 = {
+            id: 2,
             name: 'Isaac Ajala',
-            categories: 'Agric, farming, consumer goods',
+            categories: ['Agric, farming, consumer goods'],
             location: '23 Idiroko lane. Iragberi'
         };
         var busRegister = businessController.register(newBus1);
@@ -24,9 +26,10 @@ describe("businessControlTest", function(){
     });
     it("should NOT register business with incomplete data", function() {
         const newBus1 = {
-            name: 'Isaac Ajala',
+            name: 'Isaac Ajala'
         };
         var busRegister = businessController.register(newBus1);
+        // var busRegister = businessController.register('Isaac Ajala');
         busRegister.contains('error');
     });
     // update
