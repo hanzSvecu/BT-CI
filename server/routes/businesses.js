@@ -6,6 +6,16 @@ const router = express.Router();
 
 // Register a business
 router.post('/', ValidateBusiness.register, BusinessController.register);
+
+// // to use supertest
+// // // Register a business
+// // router.post('/', function(req, res, next) {
+// //     ValidateBusiness.register(req, res, next)
+// //     BusinessController.register(req, res)
+// // });
+
+
+
 // Update a business
 router.put('/:id', ValidateBusiness.register, BusinessController.update);
 // Delete a business

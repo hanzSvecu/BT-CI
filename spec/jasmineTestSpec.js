@@ -1,4 +1,4 @@
-describe("jasmineTest", function(){
+xdescribe("jasmineTest", function(){
     it("sample test to pass", function() {
         expect("1").toEqual("1");
     });
