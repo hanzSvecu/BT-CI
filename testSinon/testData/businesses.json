@@ -1,0 +1,28 @@
+{
+  "all": {
+    "success": {
+      "res": {
+        "statusCode": 200,
+        "headers": {
+          "content-type": "application/json"
+        }
+      },
+      "body": {
+        "status": "success",
+        "Business": [
+          {
+            "id": 101,
+            "name": "Company-1",
+            "categories": [
+              "cat-1",
+              "cat-2",
+              "cat-3"
+            ],
+            "location": "LOC-1"
+          }
+        ]
+      }
+    }
+  }
+
+}
