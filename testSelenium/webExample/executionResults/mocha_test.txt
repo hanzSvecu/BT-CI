@@ -1,0 +1,24 @@
+>mocha mocha_test.js
+
+
+  Google search
+    √ Webpage should have expected title value
+Promise Rejected
+    √ I open the blog website (8403ms)
+title:
+    1) another test for title
+
+
+  2 passing (12s)
+  1 failing
+
+  1) Google search
+       another test for title:
+
+      AssertionError [ERR_ASSERTION]: '' == 'Google'
+      + expected - actual
+
+      +Google
+
+      at D:\School\IdeaProjects\BP-Candidates\WEconnect-js-master\BT-CI\testSelenium\webExample\mocha_test.js:45:20
+      at process._tickCallback (internal/process/next_tick.js:68:7)
