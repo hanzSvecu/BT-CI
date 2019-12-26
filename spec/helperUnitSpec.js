@@ -1,6 +1,8 @@
 // Covers all methods of server/controllers/businesses.js
 // import jasmine from 'jasmine';
 
+// UNIT TESTS
+
 import checkUser from '../server/helpers/check';
 import checkDb from '../server/helpers/checkdb';
 import searchDb from '../server/helpers/searchdb';

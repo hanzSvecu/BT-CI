@@ -37,7 +37,7 @@ describe("businessModelTest - destructive", function() {
     });
 });
 
-describe("getAllBusinessTest", function() {
+describe("getAllBusinessTest - get all companies", function() {
     businessModel.createBusiness('name-1', ['catA', 'catB'], 'LOC1');
     businessModel.createBusiness('name-2', ['catB', 'catC'], 'LOC1');
     businessModel.createBusiness('name-3', ['catC', 'catA'], 'LOC3');

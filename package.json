@@ -52,12 +52,13 @@
     "test-old": "nyc mocha --recursive --exit --require babel-polyfill --require babel-register",
     "test": "nyc mocha --recursive --require babel-polyfill --require babel-register",
     "test-jasmine": "babel-node spec/run.js",
-    "test-jasmine-new": "jasmine --require babel-polyfill --require babel-register",
+    "test-selenium": "mocha testSelenium/webExample/selenideGeneratedCode/*.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "//": [
     "COMMENTED TEST OPTIONS",
-    "MOCHA START: nyc mocha --recursive --exit --require babel-polyfill --require babel-register"
+    "MOCHA START: nyc mocha --recursive --exit --require babel-polyfill --require babel-register",
+    "test-jasmine-new: jasmine --require babel-polyfill --require babel-register"
   ],
   "repository": {
     "type": "git",
