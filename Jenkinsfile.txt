@@ -10,21 +10,26 @@ pipeline {
                 bat 'npm build'
             }
         }
-        stage('test-unit') {
-            steps {
-                bat 'npm run-script test'
+        stage('tests without running app - independent') {
+            parallel {
+                        stage('test-unit') {
+                            steps {
+                                bat 'npm run-script test'
+                            }
+                        }
+                        stage('test-component') {
+                            steps {
+                                bat 'npm run-script test-jasmine'
+                            }
+                        }
+                         stage('test-integration') {
+                             steps {
+                                 bat 'npm run-script test-old'
+                             }
+                         }
             }
         }
-        stage('test-component') {
-            steps {
-                bat 'npm run-script test-jasmine'
-            }
-        }
-         stage('test-integration') {
-             steps {
-                 bat 'npm run-script test-old'
-             }
-         }
+
          stage('start-app') {
             steps {
                 bat 'npm start'
