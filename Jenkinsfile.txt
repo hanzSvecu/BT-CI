@@ -1,9 +1,39 @@
 pipeline {
-    agent { docker { image 'node:6.3' } }
+    agent any
+    options {
+        timeout(time: 1, unit: 'HOURS')
+    }
     stages {
         stage('build') {
             steps {
-                sh 'npm --version'
+                bat 'npm --version'
+            }
+        }
+        stage('test-unit') {
+            steps {
+                bat 'npm --version'
+            }
+        }
+        stage('test-component') {
+            steps {
+                bat 'npm --version'
+            }
+        }
+         stage('test-integration') {
+             steps {
+                 bat 'npm --version'
+             }
+         }
+        stage('stage-test-GUI') {
+            stage('start-app') {
+                steps {
+                    bat 'npm --version'
+                }
+            }
+            stage('test-GUI') {
+                steps {
+                    bat 'npm --version'
+                }
             }
         }
     }
