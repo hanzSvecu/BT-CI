@@ -24,17 +24,15 @@ pipeline {
                  bat 'npm --version'
              }
          }
-        stage('stage-test-GUI') {
-            stage('start-app') {
-                steps {
-                    bat 'npm --version'
-                }
+         stage('start-app') {
+            steps {
+                bat 'npm --version'
             }
-            stage('test-GUI') {
-                steps {
-                    bat 'npm --version'
-                }
             }
-        }
+         stage('test-GUI') {
+            steps {
+                bat 'npm --version'
+            }
+         }
     }
 }
