@@ -1,37 +1,37 @@
 pipeline {
     agent any
     options {
-        timeout(time: 1, unit: 'HOURS')
+        timeout(time: 10, unit: 'MINUTES')
     }
     stages {
         stage('build') {
             steps {
-                bat 'npm --version'
+                bat 'npm build'
             }
         }
         stage('test-unit') {
             steps {
-                bat 'npm --version'
+                bat 'npm run-script test'
             }
         }
         stage('test-component') {
             steps {
-                bat 'npm --version'
+                bat 'npm run-script test-jasmine'
             }
         }
          stage('test-integration') {
              steps {
-                 bat 'npm --version'
+                 bat 'npm run-script test-old'
              }
          }
          stage('start-app') {
             steps {
-                bat 'npm --version'
+                bat 'npm start'
             }
-            }
+         }
          stage('test-GUI') {
             steps {
-                bat 'npm --version'
+                bat 'npm run-script test-selenium'
             }
          }
     }
