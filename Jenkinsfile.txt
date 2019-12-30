@@ -33,19 +33,25 @@ pipeline {
                                  bat 'npm run-script test-old'
                              }
                          }
-                        stage('start-app') {
-                            steps {
-                                bat 'npm start'
-                            }
-                        }
-                        stage('test-GUI') {
-                            steps {
-                                bat 'npm run-script test-selenium'
-                            }
-                        }
+            }
+        }
+        stage('start-app') {
+            steps {
+                bat 'npm  run-script start'
+            }
+        }
+        stage('test-GUI') {
+            steps {
+                 bat 'npm run-script test-selenium'
             }
         }
 
+    }
 
+    post {
+        always {
+            archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
+            junit 'build/reports/**/*.xml'
+        }
     }
 }
