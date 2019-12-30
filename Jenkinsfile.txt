@@ -6,10 +6,16 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                bat 'npm install'
-                bat 'npm build'
+                bat 'npm run-script install'
+
             }
         }
+        stage('build') {
+                    steps {
+
+                        bat 'npm run-script build'
+                    }
+                }
         stage('tests without running app - independent') {
             parallel {
                         stage('test-unit') {
@@ -27,16 +33,16 @@ pipeline {
                                  bat 'npm run-script test-old'
                              }
                          }
-                                  stage('start-app') {
-                                     steps {
-                                         bat 'npm start'
-                                     }
-                                  }
-                                  stage('test-GUI') {
-                                     steps {
-                                         bat 'npm run-script test-selenium'
-                                     }
-                                  }
+                        stage('start-app') {
+                            steps {
+                                bat 'npm start'
+                            }
+                        }
+                        stage('test-GUI') {
+                            steps {
+                                bat 'npm run-script test-selenium'
+                            }
+                        }
             }
         }
 
