@@ -11,28 +11,29 @@ pipeline {
             }
         }
         stage('build') {
-                    steps {
+            steps {
 
-                        bat 'npm run-script build'
-                    }
-                }
+                bat 'npm run-script build'
+            }
+        }
         stage('tests without running app - independent') {
             parallel {
-                        stage('test-unit') {
-                            steps {
-                                bat 'npm run-script test'
-                            }
-                        }
-                        stage('test-component') {
-                            steps {
-                                bat 'npm run-script test-jasmine'
-                            }
-                        }
-                         stage('test-integration') {
-                             steps {
-                                 bat 'npm run-script test-old'
-                             }
-                         }
+                failFast true
+                stage('test-unit') {
+                    steps {
+                        bat 'npm run-script test'
+                    }
+                }
+                stage('test-component') {
+                    steps {
+                        bat 'npm run-script test-jasmine'
+                    }
+                }
+                stage('test-integration') {
+                    steps {
+                        bat 'npm run-script test-old'
+                    }
+                }
             }
         }
         stage('start-app') {
