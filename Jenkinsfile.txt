@@ -7,12 +7,10 @@ pipeline {
         stage('install') {
             steps {
                 bat 'npm install'
-
             }
         }
         stage('build') {
             steps {
-
                 bat 'npm run-script build'
             }
         }
@@ -46,9 +44,7 @@ pipeline {
                  bat 'npm run-script test-selenium'
             }
         }
-
     }
-
     post {
         always {
             archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
